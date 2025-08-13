@@ -1,0 +1,25 @@
+{
+  "name": "Google Find My MQTT",
+  "slug": "googlefindmy",
+  "version": "1.0.0",
+  "description": "Publishes Google Find-My-Device locations to MQTT",
+  "arch": ["amd64"],
+  "image": "local/googlefindmy-{arch}",
+  "startup": "application",
+  "boot": "auto",
+  "map": ["config:ro"],
+  "options": {
+    "MQTT_BROKER": "192.168.1.220",
+    "MQTT_PORT": 1883,
+    "MQTT_USERNAME": "findmy",
+    "MQTT_PASSWORD": "findmy",
+    "REFRESH_INTERVAL": 300
+  },
+  "schema": {
+    "MQTT_BROKER": "str",
+    "MQTT_PORT": "int",
+    "MQTT_USERNAME": "str?",
+    "MQTT_PASSWORD": "str?",
+    "REFRESH_INTERVAL": "int"
+  }
+}
