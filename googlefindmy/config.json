@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Publishes Google Find-My-Device locations to MQTT",
   "arch": ["amd64"],
-  "image": "local/googlefindmy-{arch}",
+  "image": "local/googlefindmy-{amd64}",
   "startup": "application",
   "boot": "auto",
   "map": ["config:ro"],
